@@ -1,21 +1,31 @@
 /*/////////////////////////////////////////////////////*/
-
+ int gcd(int a,int b)
+{
+int temp;
+if(a<b)
+{
+//交换两个数，使大数放在a上
+temp=a;
+a=b;
+b=temp;
+}
+while(b!=0)
+{
+//利用辗除法，直到b为0为止
+temp=a%b;
+a=b;
+b=temp;
+}
+return a;
+}
  void lcm(int a, int b)
 { //TODO: your definition
- long int c;
-     if (a>b)c=a ;
-    if (b>=a)c=b;
- while(1==1){
- if((c%a==0)&&(c%b==0))
-    {
-        break;
-
-    }
-c=c+1;
-
+long long int c;
+c=(long long int)a*(long long int)b/(long long int)gcd(a,b);
+printf("%I64d\n", c);
  }
-printf("%d\n", c);
-}
+
+
 /*/////////////////////////////////////////////////////*/
 
 
@@ -44,7 +54,7 @@ void solve()
   //****************************************
 
 }
- return
+
 int main()
 {  int i,t;
    scanf("%d\n",&t);
