@@ -24,10 +24,14 @@ int main()
         printf("0.");
         while(10*m<n)
         {
+             record[k]=m;
             m=m*10;
             printf("0");
+
+            k++;
+
         }
-        for(k=0; k<=999; k++)
+        for(; k<=999; k++)
         {
             record[k]=m;
             for(temp=0; temp<k; temp++)if(m==record[temp])
